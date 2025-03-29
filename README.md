@@ -150,3 +150,7 @@ This is an excellent resource for providing sample text – from old scriptures,
 [Specimen Skeleton](https://github.com/kabisa/specimen-skeleton) is an [Eleventy-based](https://www.11ty.dev/) specimen _boilerplate_. It helps you get a basic site up and running quickly, and offers you a few interactive elements to build your demos from.
 
 It will analyse your variable font and generate the CSS necessary _and_ all the sliders, so you'll hit the ground running!
+
+## Trello board
+
+https://trello.com/b/yKzt5sIb/dante-specimen-site

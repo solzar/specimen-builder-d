@@ -32,7 +32,7 @@
 				</select>
 			</div>
 		{% endif %}
-		
+
 
 		<div class="interactive-controls-container interactive-controls-buttons">
 			<button type="button" class="active" value="align-left" aria-label="Align left">
@@ -71,6 +71,19 @@
 					value="48"
 					name="font-size"
 					id="interactive-controls-fontsize"
+					step="any"
+					class="interactive-controls-slider"
+				/>
+			</li>
+			<li>
+				<label for="interactive-controls-letter-spacing">Spacing</label>
+				<input
+					type="range"
+					min="-10"
+					max="60"
+					value="0.5"
+					name="letter-spacing"
+					id="interactive-controls-letter-spacing"
 					step="any"
 					class="interactive-controls-slider"
 				/>

@@ -2,7 +2,7 @@
 
 /* Setting up some variables first */
 :root {
-	--light: #fff;
+	--light: #fff4e6;
 	--dark: #000;
 	--grey-light: #eee;
 	--grey-mid: #999;
@@ -29,7 +29,6 @@ body {
 }
 
 main {
-	max-width: 90rem;
 	padding: 0 3vw;
 }
 
