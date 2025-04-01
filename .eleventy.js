@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const util = require("util");
 const readFile = util.promisify(fs.readFile);
+const htmlmin = require("html-minifier");
 
 const inputDir = path.resolve(__dirname, "./src");
 
@@ -62,6 +63,21 @@ module.exports = eleventyConfig => {
 		"includeWebpackAsset",
 		relativePathTag(webpackAssetContents)
 	);
+
+	if (process.env.ELEVENTY_ENV === "production") {
+		eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+			if (outputPath.endsWith(".html")) {
+				let minified = htmlmin.minify(content, {
+					useShortDoctype: true,
+					removeComments: true,
+					collapseWhitespace: true
+				});
+				return minified;
+			}
+
+			return content;
+		});
+	}
 
 	return {
 		dir: {
